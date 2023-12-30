@@ -26,3 +26,5 @@ https://github.com/MohamedxSalah/PopMeUp/assets/30314294/d48e8300-51e9-4b2b-bc2d
 
 
 https://youtu.be/jNIjpZbgmWw
+
+P.S : I couldn't upload them on the store because I have to pay 5$ to be able to upload there and i'm broke xD
