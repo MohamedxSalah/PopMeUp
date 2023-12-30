@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Pop You Up",
+  "version": "2.0",
+  "description": "Change the default behavior of links from new tab to a popup",
+  "permissions": ["activeTab", "storage"],
+  "icons": {
+    "48": "icons/icon48.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
