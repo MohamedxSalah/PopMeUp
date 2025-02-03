@@ -34,6 +34,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin-bottom: 20px; /* Add margin between switches */
       }
       
       .switch {
@@ -96,12 +97,21 @@
   </head>
   <body>
     <h3>Pop Me Up</h3>
+    <!-- Auto Popup Switch -->
     <div class="switch-container">
       <label class="switch">
         <input type="checkbox" id="autoPopupCheckbox" />
         <span class="slider"></span>
       </label>
       <div class="toggle-label">Enable auto popup for links</div>
+    </div>
+    <!-- Middle-Click Popup Switch -->
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="middleClickPopupCheckbox" />
+        <span class="slider"></span>
+      </label>
+      <div class="toggle-label">Enable middle-click popup for links</div>
     </div>
     <script src="popup.js"></script>
   </body>
