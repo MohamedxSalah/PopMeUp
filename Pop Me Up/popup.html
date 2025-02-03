@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Pop Me Up</title>
-  <style>
-    body {
-      width: 200px;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
-  <p>Pop Me Up</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pop Me Up Settings</title>
+    <!-- Import the Roboto font for a Material look -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,500"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      body {
+        font-family: "Roboto", sans-serif;
+        background: #fafafa;
+        color: #424242;
+        width: 280px;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+      }
+      
+      h3 {
+        margin-top: 0;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: #3f51b5;
+      }
+      
+      /* Material Design Switch Styles */
+      .switch-container {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        height: 32px;
+      }
+      
+      /* Hide default HTML checkbox */
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      /* The slider/track */
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        background-color: #bdbdbd;
+        border-radius: 16px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transition: background-color 0.3s ease;
+      }
+      
+      /* The thumb/handle */
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 24px;
+        width: 24px;
+        left: 4px;
+        bottom: 4px;
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+      }
+      
+      /* When checked, change slider color and move the thumb */
+      .switch input:checked + .slider {
+        background-color: #3f51b5;
+      }
+      
+      .switch input:checked + .slider:before {
+        transform: translateX(20px);
+      }
+      
+      /* Label text below the toggle */
+      .toggle-label {
+        margin-top: 12px;
+        font-size: 15px;
+        font-weight: 400;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Pop Me Up</h3>
+    <div class="switch-container">
+      <label class="switch">
+        <input type="checkbox" id="autoPopupCheckbox" />
+        <span class="slider"></span>
+      </label>
+      <div class="toggle-label">Enable auto popup for links</div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
 </html>
