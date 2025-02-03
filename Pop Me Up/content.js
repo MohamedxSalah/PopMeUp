@@ -25,6 +25,9 @@
   function handleLinkClick(e) {
     if (!autoPopupEnabled) return;
 
+    // Ignore right-clicks (button === 2)
+    if (e.button === 2) return;
+
     const link = findLinkElement(e.target);
     if (!link?.href) return;
 
@@ -35,7 +38,7 @@
     if (
       e.ctrlKey ||
       e.metaKey ||
-      e.button === 1 ||
+      e.button === 1 || // Middle-click
       link.target === '_blank' ||
       hasWindowOpenBlank
     ) {
