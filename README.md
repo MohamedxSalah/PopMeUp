@@ -1,24 +1,26 @@
-# PopMeUp - Little Arc for Chromium based browsers!
+# PopMeUp - Little Arc for Chromium-based browsers!
 ![pop](https://github.com/MohamedxSalah/PopMeUp/assets/30314294/1fc32c13-a137-4569-a316-454df8ad1b9e)
 
-Pop Me Up and Pop You Up ,  are to extensions that allow you open links in a popup both manually and automatically Like Arc Browser!
+Pop Me Up is an extension that allow you to open links in a popup both manually and automatically Like Arc Browser!
 
 # The story
 I saw this post here https://www.reddit.com/r/chrome/comments/18tl6gw/chrome_extension_that_make_the_links_you_click/ 
-and i was surprised that there is no extension to do that, as it seemed like easy thing. 
+and I was surprised that there was no extension to do that, as it seemed like an easy thing to do. 
 
-So i wanted to make one but i don't have any knowledge of coding or anything. 
-Thus, i decided for fun to use ChatGPT! 
+So I wanted to make one but I don't know anything about coding. 
+Thus, I decided for fun to use ChatGPT! 
 
-and so after literally a day with 20 hours of work trying to figure out something and not knowing what i'm doing and asking chatGPT why the thing isn't working xD
+and so after literally a day with 20 hours of work trying to figure out something and not knowing what I'm doing and asking chatGPT why the thing isn't working xD
 
-I created 2 different extensions.
+I created an extension 
 
-# 1- Pop Me Up (manual approach)
-The first one is the Manual One, it adds an option to the context menu that allows you to open link as a popup
+# Pop Me Up 
 
-# 2- Pop You Up (Automatic just like Arc approach)
-The second one is the autoatic one, it changes the default behavior of you clicking on a link from opening as a new tab to open as a popup automatically. (one bug tho i couldn't fix : it doesn't work with links in youtube description or comments, it works on every other link on any website tho, even reddit and twitter) 
+It allows you to open links in a pop up menu in 2 ways
+
+The first one is the Manual One, it adds an option to the context menu that allows you to open a link as a popup
+
+The second one is the automatic one, it changes the default behavior of you clicking on a link from opening as a new tab to open as a popup automatically.
 
 # Video Showing Test 
 
@@ -27,4 +29,4 @@ https://github.com/MohamedxSalah/PopMeUp/assets/30314294/d48e8300-51e9-4b2b-bc2d
 
 https://youtu.be/jNIjpZbgmWw
 
-P.S : I couldn't upload them on the store because I have to pay 5$ to be able to upload there and i'm broke xD
+P.S : I couldn't upload ot on the store because I have to pay 5$ to be able to upload there and i'm broke xD
