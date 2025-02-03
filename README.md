@@ -22,11 +22,4 @@ The first one is the Manual One, it adds an option to the context menu that allo
 
 The second one is the automatic one, it changes the default behavior of you clicking on a link from opening as a new tab to open as a popup automatically.
 
-# Video Showing Test 
-
-https://github.com/MohamedxSalah/PopMeUp/assets/30314294/d48e8300-51e9-4b2b-bc2d-eacaaa2c2f4c
-
-
-https://youtu.be/jNIjpZbgmWw
-
 P.S : I couldn't upload ot on the store because I have to pay 5$ to be able to upload there and i'm broke xD
