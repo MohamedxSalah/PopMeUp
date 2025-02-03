@@ -1,14 +1,21 @@
 (function () {
   let autoPopupEnabled = false;
+  let middleClickPopupEnabled = false;
 
   // Improved storage handling
-  chrome.storage.sync.get('autoPopup', (data) => {
+  chrome.storage.sync.get(['autoPopup', 'middleClickPopup'], (data) => {
     autoPopupEnabled = data.autoPopup || false;
+    middleClickPopupEnabled = data.middleClickPopup || false;
   });
 
   chrome.storage.onChanged.addListener((changes, area) => {
-    if (area === 'sync' && changes.autoPopup) {
-      autoPopupEnabled = changes.autoPopup.newValue;
+    if (area === 'sync') {
+      if (changes.autoPopup) {
+        autoPopupEnabled = changes.autoPopup.newValue;
+      }
+      if (changes.middleClickPopup) {
+        middleClickPopupEnabled = changes.middleClickPopup.newValue;
+      }
     }
   });
 
@@ -21,10 +28,8 @@
     return null;
   }
 
-  // Better event handling for YouTube and other sites
+  // Handle link clicks
   function handleLinkClick(e) {
-    if (!autoPopupEnabled) return;
-
     // Ignore right-clicks (button === 2)
     if (e.button === 2) return;
 
@@ -35,12 +40,15 @@
     const onclickAttr = link.getAttribute('onclick') || '';
     const hasWindowOpenBlank = onclickAttr.includes('window.open') && onclickAttr.includes('_blank');
 
+    const isSpecialClick = e.ctrlKey || e.metaKey || link.target === '_blank' || hasWindowOpenBlank;
+
+    const isLeftClick = e.button === 0;
+    const isMiddleClick = e.button === 1;
+
+    // Determine whether to intercept the click
     if (
-      e.ctrlKey ||
-      e.metaKey ||
-      e.button === 1 || // Middle-click
-      link.target === '_blank' ||
-      hasWindowOpenBlank
+      (autoPopupEnabled && isSpecialClick && isLeftClick) || // Intercept left-clicks when autoPopup is enabled and it's a special click
+      (middleClickPopupEnabled && isMiddleClick)             // Intercept middle-clicks when middleClickPopup is enabled
     ) {
       e.preventDefault();
       e.stopImmediatePropagation(); // Critical for intercepting default behavior
