@@ -1,24 +1,33 @@
 {
   "manifest_version": 3,
   "name": "Pop Me Up",
-  "version": "1.0",
-  "description": "Add an option to Open links as a Popup",
-  "permissions": ["contextMenus", "activeTab"],
-  "icons": {
-    "48": "icon.png"
-  },
-  "action": {
-    "default_icon": "icon.png",
-    "default_title": "Pop Me Up",
-    "default_popup": "popup.html"
-  },
+  "version": "2.0",
+  "description": "Open links in a new popup window automatically or via context menu.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "scripting",
+    "activeTab",
+    "tabs"
+  ],
   "background": {
     "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"]
+      "js": ["content.js"],
+      "run_at": "document_end"
     }
   ]
 }
