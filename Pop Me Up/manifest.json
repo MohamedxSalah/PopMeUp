@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Pop Me Up",
-  "version": "2.0",
+  "version": "3.0",
   "description": "Open links in a new popup window automatically or via context menu.",
   "permissions": [
     "contextMenus",
