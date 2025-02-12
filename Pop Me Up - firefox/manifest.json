@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "Pop Me Up",
+  "version": "3.0",
+  "description": "Open links in a new popup window automatically or via context menu.",
+  "permissions": [
+    "contextMenus",
+    "storage",
+    "activeTab",
+    "tabs",
+    "<all_urls>"
+  ],
+  "background": {
+    "scripts": ["background.js"], // Firefox requires "scripts" instead of "service_worker"
+    "persistent": false
+  },
+  "browser_action": { // Use "browser_action" instead of "action" for Firefox
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "popmeup@example.com",
+      "strict_min_version": "91.0"
+    }
+  }
+}
