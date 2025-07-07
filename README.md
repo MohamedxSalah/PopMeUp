@@ -28,6 +28,8 @@ but it's available on firefox webstore
 https://addons.mozilla.org/en-US/firefox/addon/pop-me-up/
 
 Showcasing: 
-[![Youtube video showcasing](https://i.ibb.co/Jwt0k1N2/arc.png)](https://youtu.be/wT3smLvn1Fs)
+
+
+[![Youtube video showcasing](https://youtu.be/wT3smLvn1Fs)
 
 
