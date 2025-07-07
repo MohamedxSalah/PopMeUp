@@ -30,7 +30,9 @@ https://addons.mozilla.org/en-US/firefox/addon/pop-me-up/
 # Video Showcase
 
 
-https://github.com/user-attachments/assets/5e210976-32b7-4b76-ba18-4135b53cf3bd
+https://github.com/user-attachments/assets/6ef17349-d594-4398-8a52-87276ed0ce2c
+
+
 
 
 
