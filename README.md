@@ -28,6 +28,9 @@ but it's available on firefox webstore
 https://addons.mozilla.org/en-US/firefox/addon/pop-me-up/
 
 # Youtube Video Showcase
-https://youtu.be/wT3smLvn1Fs
+
+
+https://github.com/user-attachments/assets/5e210976-32b7-4b76-ba18-4135b53cf3bd
+
 
 
