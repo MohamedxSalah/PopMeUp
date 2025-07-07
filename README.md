@@ -27,7 +27,7 @@ P.S : I couldn't upload ot on the chrome webstore because I have to pay 5$ to be
 but it's available on firefox webstore
 https://addons.mozilla.org/en-US/firefox/addon/pop-me-up/
 
-# Youtube Video Showcase
+# Video Showcase
 
 
 https://github.com/user-attachments/assets/5e210976-32b7-4b76-ba18-4135b53cf3bd
